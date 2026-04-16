@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Liberté Psicologia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+</head>
+<body class="flex min-h-screen bg-cinza-nevoa">
+
+    <!-- Sidebar Admin -->
+    <aside class="w-64 bg-ceu-noturno text-branco-puro flex flex-col fixed h-full z-40">
+        <div class="h-20 flex items-center justify-center border-b border-gray-700">
+            <a href="../index.html" class="flex items-center gap-2 bg-white px-3 py-1 rounded-lg">
+                <img src="../img/Logo.png" alt="Liberté Psicologia" class="h-8">
+            </a>
+        </div>
+        
+        <nav class="flex-grow py-8 px-4 space-y-2">
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-azul-serena text-branco-puro font-bold shadow">
+                <i class="fa-solid fa-users"></i> Profissionais
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-branco-puro hover:bg-gray-800 transition-colors">
+                <i class="fa-solid fa-file-pen"></i> Editar Site (Mock)
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-branco-puro hover:bg-gray-800 transition-colors">
+                <i class="fa-solid fa-chart-pie"></i> Relatórios (Mock)
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-branco-puro hover:bg-gray-800 transition-colors">
+                <i class="fa-solid fa-gear"></i> Configurações (Mock)
+            </a>
+        </nav>
+
+        <div class="p-4 border-t border-gray-700">
+            <a href="../index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-damasco-acolhedor hover:bg-gray-800 transition-colors font-bold">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow ml-64 flex flex-col min-h-screen">
+        
+        <!-- Topbar -->
+        <header class="h-20 bg-branco-puro shadow-soft flex items-center justify-between px-8 sticky top-0 z-30">
+            <h2 class="text-xl font-bold text-ceu-noturno">Gerenciar Profissionais</h2>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-cinza-nevoa flex items-center justify-center text-azul-serena">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-azul-serena text-white flex items-center justify-center font-bold">A</div>
+                    <span class="font-bold text-sm text-ceu-noturno hidden sm:block">Admin.</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="p-8 flex-grow">
+            
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-ceu-noturno">Lista de Psicólogos</h3>
+                    <p class="text-gray-500 text-sm">Visualize, edite ou crie novos perfis.</p>
+                </div>
+                <!-- Botão Adicionar -->
+                <button id="btn-novo" class="bg-verde-equilibrio text-branco-puro px-6 py-3 rounded-xl font-bold shadow-soft hover:-translate-y-1 transition-transform flex items-center gap-2">
+                    <i class="fa-solid fa-plus"></i> Novo Perfil
+                </button>
+            </div>
+
+            <!-- Tabela -->
+            <div class="bg-branco-puro rounded-3xl shadow-soft border border-white overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-cinza-nevoa text-gray-500 text-sm uppercase tracking-wider">
+                                <th class="p-4 font-bold border-b border-gray-100">Profissional</th>
+                                <th class="p-4 font-bold border-b border-gray-100">CRP</th>
+                                <th class="p-4 font-bold border-b border-gray-100">Abordagem</th>
+                                <th class="p-4 font-bold border-b border-gray-100">Status</th>
+                                <th class="p-4 font-bold border-b border-gray-100 text-right">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-psicologos" class="divide-y divide-gray-100">
+                            <!-- JS vai preencher -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal Form (Escondido por padrão) -->
+    <div id="modal-form" class="fixed inset-0 bg-ceu-noturno bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-branco-puro rounded-3xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-float animate-fade-in relative text-sm">
+            <button id="btn-fechar-modal" class="absolute top-6 right-6 text-gray-400 hover:text-red-500 text-2xl"><i class="fa-solid fa-xmark"></i></button>
+            
+            <h3 id="modal-titulo" class="text-2xl font-bold text-ceu-noturno mb-6">Novo Psicólogo</h3>
+
+            <form id="form-psicologo" class="space-y-4">
+                <input type="hidden" id="f-id">
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-600 font-bold mb-1">Nome Completo</label>
+                        <input type="text" id="f-nome" required class="w-full bg-cinza-nevoa border-none rounded-lg px-4 py-2 focus:ring-2 focus:ring-azul-serena outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gray-600 font-bold mb-1">CRP</label>
+                        <input type="text" id="f-crp" required class="w-full bg-cinza-nevoa border-none rounded-lg px-4 py-2 focus:ring-2 focus:ring-azul-serena outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-600 font-bold mb-1">URL da Foto</label>
+                        <input type="text" id="f-foto" placeholder="https://..." class="w-full bg-cinza-nevoa border-none rounded-lg px-4 py-2 focus:ring-2 focus:ring-azul-serena outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gray-600 font-bold mb-1">Gênero</label>
+                        <select id="f-genero" class="w-full bg-cinza-nevoa border-none rounded-lg px-4 py-2 focus:ring-2 focus:ring-azul-serena outline-none">
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+
+                    <div>
+                        <label class="block text-gray-600 font-bold mb-1">Abordagem</label>
+                        <input type="text" id="f-abordagem" required class="w-full bg-cinza-nevoa border-none rounded-lg px-4 py-2 focus:ring-2 focus:ring-azul-serena outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-gray-600 font-bold mb-1">Especialidades (separadas por vírgula)</label>
+                    <input type="text" id="f-especialidades" placeholder="Ansiedade, Depressão..." required class="w-full bg-cinza-nevoa border-none rounded-lg px-4 py-2 focus:ring-2 focus:ring-azul-serena outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-gray-600 font-bold mb-1">Sobre Mim</label>
+                    <textarea id="f-sobre" rows="4" required class="w-full bg-cinza-nevoa border-none rounded-lg px-4 py-2 focus:ring-2 focus:ring-azul-serena outline-none"></textarea>
+                </div>
+
+                <div class="flex items-center gap-4 mt-6">
+                    <label class="flex items-center gap-2 cursor-pointer font-bold">
+                        <input type="checkbox" id="f-destaque" class="rounded text-azul-serena"> Promover na Home (Destaque)
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer font-bold">
+                        <input type="checkbox" id="f-disponivel" class="rounded text-verde-equilibrio"> Disponível "Online Agora"
+                    </label>
+                </div>
+
+                <div class="flex justify-end gap-3 pt-6 border-t border-gray-100">
+                    <button type="button" id="btn-cancelar" class="px-6 py-2 rounded-lg font-bold text-gray-500 hover:bg-gray-100">Cancelar</button>
+                    <button type="submit" class="bg-azul-serena text-branco-puro px-8 py-2 rounded-lg font-bold shadow-soft hover:bg-opacity-90">Salvar Perfil</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="painel.js"></script>
+</body>
+</html>

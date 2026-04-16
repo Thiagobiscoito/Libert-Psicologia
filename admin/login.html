@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso - Liberté Psicologia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-cinza-nevoa">
+
+    <div class="bg-branco-puro p-10 rounded-3xl shadow-float max-w-md w-full border border-white mx-4 hover-float transition-slow">
+        <div class="text-center mb-10">
+            <a href="../index.html" class="inline-flex items-center gap-2 mb-6">
+                <img src="../img/Logo.png" alt="Liberté Psicologia Logo" class="h-14">
+            </a>
+            <h1 class="text-2xl font-bold text-ceu-noturno font-heading">Bem-vindo(a)</h1>
+            <p class="text-gray-500 font-light mt-1">Acesse seu painel administrativo</p>
+        </div>
+
+        <form id="login-form">
+            <div class="mb-5">
+                <label class="block text-sm font-medium text-gray-600 mb-2">E-mail</label>
+                <div class="relative">
+                    <i class="fa-regular fa-envelope absolute left-4 top-3.5 text-gray-400"></i>
+                    <input type="email" id="email" class="w-full bg-cinza-nevoa border-none rounded-xl pl-12 pr-4 py-3 focus:ring-2 focus:ring-azul-serena outline-none" placeholder="admin@liberte.com" required>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-medium text-gray-600 mb-2">Senha</label>
+                <div class="relative">
+                    <i class="fa-solid fa-lock absolute left-4 top-3.5 text-gray-400"></i>
+                    <input type="password" id="senha" class="w-full bg-cinza-nevoa border-none rounded-xl pl-12 pr-4 py-3 focus:ring-2 focus:ring-azul-serena outline-none" placeholder="******" required>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-8">
+                <label class="flex items-center gap-2 cursor-pointer text-sm">
+                    <input type="checkbox" class="text-azul-serena focus:ring-azul-serena rounded border-gray-300">
+                    <span class="text-gray-600">Lembrar-me</span>
+                </label>
+                <a href="#" class="text-sm font-bold text-azul-serena hover:underline">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="w-full bg-azul-serena text-branco-puro py-4 rounded-xl font-bold shadow-soft hover:bg-opacity-90 transition-all hover:-translate-y-1">
+                Entrar
+            </button>
+        </form>
+        
+        <p class="text-center text-sm text-gray-400 mt-8">
+            Dica de teste: Digite qualquer coisa para entrar no painel mockado.
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Qualquer dado aceita para simulação
+            window.location.href = 'painel.html';
+        });
+    </script>
+</body>
+</html>

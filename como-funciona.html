@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Funciona - Liberté Psicologia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-cinza-nevoa">
+
+    <header class="bg-branco-puro shadow-soft sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-12 sm:h-14 pb-2">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="busca.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Psicólogos</a>
+                    <a href="como-funciona.html" class="text-azul-serena font-medium">Como Funciona</a>
+                    <a href="quem-somos.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Quem Somos</a>
+                    <a href="sou-psicologo.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Sou Profissional</a>
+                    <a href="admin/login.html" class="bg-azul-serena text-branco-puro px-5 py-2 rounded-full hover:bg-opacity-90 transition-slow font-medium shadow-soft hover-float">Entrar</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-ceu-noturno hover:text-azul-serena focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-12 pb-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            
+            <div class="text-center mb-10">
+                <h1 class="text-4xl font-bold text-ceu-noturno mb-4">Como a Liberté Funciona</h1>
+                <p class="text-lg text-gray-500 font-light">Entenda como facilitamos a sua jornada de saúde mental.</p>
+            </div>
+
+            <!-- Abas -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-branco-puro rounded-full p-1 shadow-soft flex border border-gray-100">
+                    <button id="tab-paciente" class="px-6 py-2 rounded-full text-sm font-bold bg-azul-serena text-branco-puro shadow transition-all">Para Pacientes</button>
+                    <button id="tab-psicologo" class="px-6 py-2 rounded-full text-sm font-bold text-gray-500 hover:text-ceu-noturno transition-all">Para Psicólogos</button>
+                </div>
+            </div>
+
+            <!-- Conteúdo Pacientes -->
+            <div id="content-paciente" class="space-y-8 animate-fade-in">
+                
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 text-azul-serena flex items-center justify-center flex-shrink-0 text-xl font-bold">1</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-ceu-noturno mb-2">Busca Simplificada</h3>
+                            <p class="text-gray-600">Nossa plataforma permite filtrar profissionais por valor da sessão, gênero, especialidade e abordagem. Ao encontrar alguém, você pode ler o perfil completo e ver se conectar com a forma que o psicólogo trabalha.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 text-azul-serena flex items-center justify-center flex-shrink-0 text-xl font-bold">2</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-ceu-noturno mb-2">Agendamento pelo WhatsApp</h3>
+                            <p class="text-gray-600">O botão "Agendar" leva você diretamente ao WhatsApp do profissional. Dessa forma, vocês combinam o horário exato que fica bom para ambos, sem intermediários complicando ou cobrando taxas em cima do valor do seu tratamento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 text-azul-serena flex items-center justify-center flex-shrink-0 text-xl font-bold">3</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-ceu-noturno mb-2">Sigilo, Privacidade e Pagamento</h3>
+                            <p class="text-gray-600">
+                                As sessões online exigem um ambiente silencioso e conexão estável. <strong>Tudo o que é dito na sessão é protegido por rigoroso sigilo profissional.</strong><br><br>
+                                O pagamento é realizado diretamente (via PIX ou transferência) para a conta do psicólogo, gerando economia para você e valorização do trabalho do profissional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Conteúdo Psicólogos -->
+            <div id="content-psicologo" class="space-y-8 animate-fade-in hidden">
+                
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white border-l-4 border-l-verde-equilibrio">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-green-50 text-verde-equilibrio flex items-center justify-center flex-shrink-0 text-xl font-bold">1</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-ceu-noturno mb-2">Cadastro Ético e Rápido</h3>
+                            <p class="text-gray-600">Crie sua conta informando seu nome, foto profissional, pequena bio, especialidades, valor e seu <strong>CRP ativo</strong>. É vital que você esteja também cadastrado no <em>e-Psi</em>. Em poucos minutos seu perfil estará online para todo o Brasil.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white border-l-4 border-l-verde-equilibrio">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-green-50 text-verde-equilibrio flex items-center justify-center flex-shrink-0 text-xl font-bold">2</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-ceu-noturno mb-2">Sem Intermediações</h3>
+                            <p class="text-gray-600">Na Liberté, servimos apenas como uma vitrine do seu trabalho. Quando o paciente clica no seu perfil, ele será redirecionado ao seu WhatsApp. O agendamento, contrato terapêutico e cobrança financeiras ficam sob sua inteira responsabilidade.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white border-l-4 border-l-verde-equilibrio">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-green-50 text-verde-equilibrio flex items-center justify-center flex-shrink-0 text-xl font-bold">3</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-ceu-noturno mb-2">Sua Autonomia</h3>
+                            <p class="text-gray-600">Você escolhe seu preço, sua abordagem, seu público e o número de vagas disponíveis. Caso a agenda lote, basta acessar seu painel e desmarcar a flag "Disponível". Simples assim!</p>
+                            <a href="sou-psicologo.html" class="inline-block mt-4 text-verde-equilibrio font-bold hover:underline">Ver planos de destaque <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Alerta CVV e Responsabilidade Técnica -->
+    <section class="bg-[#6B11CB] text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Coluna Responsável -->
+                <div class="md:col-span-1">
+                    <p class="text-sm opacity-80 font-light mb-1">Responsável técnico</p>
+                    <p class="text-xl font-bold font-heading">Oliviane Assis Ferrari Magro</p>
+                    <p class="text-sm font-medium">CRP: 08/34316</p>
+                </div>
+                <!-- Coluna Alerta -->
+                <div class="md:col-span-2">
+                    <p class="text-sm leading-relaxed text-balance">
+                        <strong>Atenção:</strong> Este site não oferece tratamento ou aconselhamento imediato para pessoas em crise suicida. Em caso de crise, ligue para <strong>188 (CVV)</strong> ou acesse o site <a href="https://www.cvv.org.br" target="_blank" class="underline hover:text-damasco-acolhedor transition-colors">www.cvv.org.br</a>. Em caso de emergência, procure atendimento em um hospital mais próximo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ceu-noturno text-branco-puro py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4 bg-white p-2 rounded-lg inline-block">
+                <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-8">
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2026 Liberté Psicologia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnPac = document.getElementById('tab-paciente');
+            const btnPsi = document.getElementById('tab-psicologo');
+            const contPac = document.getElementById('content-paciente');
+            const contPsi = document.getElementById('content-psicologo');
+
+            btnPac.addEventListener('click', () => {
+                btnPac.className = "px-6 py-2 rounded-full text-sm font-bold bg-azul-serena text-branco-puro shadow transition-all";
+                btnPsi.className = "px-6 py-2 rounded-full text-sm font-bold text-gray-500 hover:text-ceu-noturno transition-all";
+                contPac.classList.remove('hidden');
+                contPsi.classList.add('hidden');
+            });
+
+            btnPsi.addEventListener('click', () => {
+                btnPsi.className = "px-6 py-2 rounded-full text-sm font-bold bg-verde-equilibrio text-branco-puro shadow transition-all";
+                btnPac.className = "px-6 py-2 rounded-full text-sm font-bold text-gray-500 hover:text-ceu-noturno transition-all";
+                contPsi.classList.remove('hidden');
+                contPac.classList.add('hidden');
+            });
+        });
+    </script>
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>

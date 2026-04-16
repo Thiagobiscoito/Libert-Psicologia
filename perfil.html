@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Psicólogo - Liberté Psicologia</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-cinza-nevoa">
+
+    <!-- Header / Navbar -->
+    <header class="bg-branco-puro shadow-soft sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-12 sm:h-14 pb-2">
+                    </a>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="busca.html" class="text-azul-serena font-medium">Psicólogos</a>
+                    <a href="como-funciona.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Como Funciona</a>
+                    <a href="admin/login.html" class="bg-azul-serena text-branco-puro px-5 py-2 rounded-full hover:bg-opacity-90 transition-slow font-medium shadow-soft">Entrar</a>
+                </nav>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-ceu-noturno hover:text-azul-serena focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-12 container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <a href="busca.html" class="inline-flex items-center gap-2 text-gray-500 hover:text-azul-serena mb-6 transition-colors">
+            <i class="fa-solid fa-arrow-left"></i> Voltar para busca
+        </a>
+
+        <div id="perfil-container" class="grid grid-cols-1 lg:grid-cols-3 gap-8 hidden">
+            
+            <!-- Coluna Principal (Esquerda/Centro) -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Card de Apresentação -->
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white">
+                    <div class="flex flex-col sm:flex-row gap-8 items-start">
+                        <div class="w-32 h-32 sm:w-48 sm:h-48 rounded-2xl overflow-hidden flex-shrink-0 relative shadow-float">
+                            <img id="p-foto" src="" alt="Foto do Psicólogo" class="w-full h-full object-cover">
+                            <div id="p-badge" class="absolute hidden bottom-2 right-2 bg-verde-equilibrio text-branco-puro text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-white opacity-90 animate-pulse"></span>Disponível
+                            </div>
+                        </div>
+                        
+                        <div class="flex-grow">
+                            <h1 id="p-nome" class="text-3xl sm:text-4xl font-bold text-ceu-noturno mb-2">Carregando...</h1>
+                            <p id="p-crp" class="text-gray-500 font-medium mb-6">CRP </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6" id="p-especialidades">
+                                <!-- Especialidades aqui -->
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-6 mt-2">
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide font-bold mb-1">Abordagem</p>
+                                    <p id="p-abordagem" class="font-medium text-ceu-noturno"></p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wide font-bold mb-1">Público</p>
+                                    <p class="font-medium text-ceu-noturno">Adolescentes, Adultos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sobre Mim -->
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white">
+                    <h2 class="text-2xl font-bold text-ceu-noturno mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-user-circle text-damasco-acolhedor"></i> Sobre Mim
+                    </h2>
+                    <p id="p-sobre" class="text-gray-600 leading-relaxed font-light text-lg whitespace-pre-line"></p>
+                </div>
+
+                <!-- Formação -->
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white">
+                    <h2 class="text-2xl font-bold text-ceu-noturno mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-graduation-cap text-damasco-acolhedor"></i> Formação e Especialidades
+                    </h2>
+                    <ul id="p-formacao" class="space-y-4 text-gray-600">
+                        <!-- Formações aqui -->
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Coluna Sidebar (Direita) -->
+            <div class="lg:col-span-1">
+                <div class="bg-branco-puro rounded-3xl p-8 shadow-soft border border-white sticky top-28">
+                    
+                    <div class="flex items-center gap-3 text-damasco-acolhedor mb-2">
+                        <i class="fa-solid fa-star text-lg"></i>
+                        <span id="p-estrelas" class="text-2xl font-bold text-ceu-noturno"></span>
+                        <span id="p-avaliacoes" class="text-sm text-gray-400 font-medium"></span>
+                    </div>
+
+                    <div class="mt-8 mb-8 pb-8 border-b border-gray-100">
+                        <p class="text-sm text-gray-500 mb-2">Valor da Sessão (50 min)</p>
+                        <h3 class="text-4xl font-bold text-azul-serena">R$ 30</h3>
+                    </div>
+
+                    <h4 class="font-bold text-ceu-noturno mb-4 flex items-center gap-2">
+                        <i class="fa-regular fa-clock text-gray-400"></i> Horários Disponíveis
+                    </h4>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-600">Segunda-feira</span>
+                            <span class="font-medium text-verde-equilibrio bg-green-50 px-3 py-1 rounded-lg">Manhã / Tarde</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-600">Terça-feira</span>
+                            <span class="font-medium text-verde-equilibrio bg-green-50 px-3 py-1 rounded-lg">Tarde / Noite</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-600">Quarta-feira</span>
+                            <span class="font-medium text-gray-400 bg-gray-50 px-3 py-1 rounded-lg">Indisponível</span>
+                        </div>
+                    </div>
+
+                    <a id="p-whatsapp" href="#" target="_blank" class="w-full text-center py-4 px-6 bg-verde-equilibrio text-branco-puro rounded-xl font-bold hover:bg-opacity-90 transition-slow hover-float flex items-center justify-center gap-2 text-lg shadow-soft">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Agendar Sessão
+                    </a>
+                    
+                    <p class="text-xs text-center text-gray-400 mt-4">
+                        O pagamento é feito diretamente ao profissional. A Liberté não cobra taxas do paciente.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="loading" class="py-20 text-center">
+            <i class="fa-solid fa-spinner fa-spin text-4xl text-azul-serena"></i>
+            <p class="mt-4 text-gray-500 text-lg">Carregando perfil...</p>
+        </div>
+
+        <div id="not-found" class="hidden py-20 text-center">
+            <i class="fa-solid fa-user-xmark text-6xl text-gray-300 mb-4"></i>
+            <h2 class="text-2xl font-bold text-ceu-noturno">Psicólogo não encontrado</h2>
+            <p class="mt-2 text-gray-500 mb-6">O perfil que você tentou acessar não existe ou foi removido.</p>
+            <a href="busca.html" class="text-azul-serena font-medium hover:underline">Voltar para a busca</a>
+        </div>
+
+    </main>
+
+    </main>
+
+    <!-- Alerta CVV e Responsabilidade Técnica -->
+    <section class="bg-[#6B11CB] text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Coluna Responsável -->
+                <div class="md:col-span-1">
+                    <p class="text-sm opacity-80 font-light mb-1">Responsável técnico</p>
+                    <p class="text-xl font-bold font-heading">Oliviane Assis Ferrari Magro</p>
+                    <p class="text-sm font-medium">CRP: 08/34316</p>
+                </div>
+                <!-- Coluna Alerta -->
+                <div class="md:col-span-2">
+                    <p class="text-sm leading-relaxed text-balance">
+                        <strong>Atenção:</strong> Este site não oferece tratamento ou aconselhamento imediato para pessoas em crise suicida. Em caso de crise, ligue para <strong>188 (CVV)</strong> ou acesse o site <a href="https://www.cvv.org.br" target="_blank" class="underline hover:text-damasco-acolhedor transition-colors">www.cvv.org.br</a>. Em caso de emergência, procure atendimento em um hospital mais próximo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simples -->
+    <footer class="bg-ceu-noturno text-branco-puro py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4 bg-white p-2 rounded-lg inline-block">
+                <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-8">
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2026 Liberté Psicologia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = parseInt(urlParams.get('id'));
+            
+            const psicologos = getPsicologos();
+            const p = psicologos.find(x => x.id === id);
+
+            const container = document.getElementById('perfil-container');
+            const loading = document.getElementById('loading');
+            const notFound = document.getElementById('not-found');
+
+            setTimeout(() => { // Simular um pequeno delay para a UI ficar mais suave
+                loading.classList.add('hidden');
+                
+                if (p) {
+                    container.classList.remove('hidden');
+
+                    document.getElementById('p-foto').src = p.foto;
+                    document.getElementById('p-nome').textContent = p.nome;
+                    document.getElementById('p-crp').textContent = 'CRP ' + p.crp;
+                    document.getElementById('p-abordagem').textContent = p.abordagem;
+                    document.getElementById('p-sobre').textContent = p.sobre;
+                    document.getElementById('p-estrelas').textContent = p.estrelas;
+                    document.getElementById('p-avaliacoes').textContent = `(baseado em ${p.avaliacoes} opiniões)`;
+
+                    
+                    if(p.disponivel) {
+                        document.getElementById('p-badge').classList.remove('hidden');
+                    }
+
+                    const espsContainer = document.getElementById('p-especialidades');
+                    p.especialidades.forEach(esp => {
+                        espsContainer.innerHTML += `<span class="bg-azul-serena bg-opacity-10 text-azul-serena text-xs px-3 py-1.5 rounded-lg font-bold uppercase tracking-wider">${esp}</span>`;
+                    });
+
+                    const formacaoContainer = document.getElementById('p-formacao');
+                    p.formacao.forEach(f => {
+                        formacaoContainer.innerHTML += `<li class="flex items-start gap-3"><i class="fa-solid fa-check text-verde-equilibrio mt-1"></i><span class="text-lg">${f}</span></li>`;
+                    });
+
+                    // Link do WhatsApp com mensagem pré-definida
+                    const msg = encodeURIComponent(`Olá ${p.nome}, encontrei seu perfil na plataforma Liberté e gostaria de saber mais sobre as sessões.`);
+                    document.getElementById('p-whatsapp').href = `https://api.whatsapp.com/send?phone=5511999999999&text=${msg}`;
+                    
+                    document.title = `${p.nome} - Psicólogo na Liberté`;
+                    
+                } else {
+                    notFound.classList.remove('hidden');
+                }
+            }, 300);
+        });
+    </script>
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>

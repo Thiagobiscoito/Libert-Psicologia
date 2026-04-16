@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Liberté Psicologia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-cinza-nevoa">
+
+    <header class="bg-branco-puro shadow-soft sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-12 sm:h-14 pb-2">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="busca.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Psicólogos</a>
+                    <a href="como-funciona.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Como Funciona</a>
+                    <a href="blog.html" class="text-azul-serena font-medium">Blog</a>
+                    <a href="sou-psicologo.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Sou Profissional</a>
+                    <a href="admin/login.html" class="bg-azul-serena text-branco-puro px-5 py-2 rounded-full hover:bg-opacity-90 transition-slow font-medium shadow-soft">Entrar</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-ceu-noturno hover:text-azul-serena focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-bold font-heading text-ceu-noturno mb-4">Conteúdo e Reflexões</h1>
+                <p class="text-gray-500 font-light max-w-2xl mx-auto">Artigos escritos pelos nossos profissionais sobre saúde mental, autoconhecimento e bem-estar.</p>
+            </div>
+
+            <!-- Grade de Posts -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Post 1 -->
+                <article class="bg-branco-puro rounded-3xl overflow-hidden shadow-soft hover-float group cursor-pointer border border-white">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-damasco-acolhedor opacity-20 group-hover:opacity-10 transition-opacity z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Meditação">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-azul-serena uppercase tracking-wider">Ansiedade</span>
+                            <span class="text-xs text-gray-400">Há 2 dias</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-ceu-noturno mb-3 group-hover:text-azul-serena transition-colors">Como lidar com a ansiedade antes de dormir?</h2>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-3">A insônia relacionada à ansiedade é muito comum. A mente fica acelerada e o corpo não relaxa. Aprenda técnicas de respiração e higiene do sono para mudar esse ciclo...</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop" alt="Foto Autor"></div>
+                            <span class="text-xs font-bold text-gray-700">Dra. Ana Clara Fontes</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="bg-branco-puro rounded-3xl overflow-hidden shadow-soft hover-float group cursor-pointer border border-white">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-azul-serena opacity-20 group-hover:opacity-10 transition-opacity z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Comunicação">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-verde-equilibrio uppercase tracking-wider">Relacionamentos</span>
+                            <span class="text-xs text-gray-400">10 Abr 2026</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-ceu-noturno mb-3 group-hover:text-verde-equilibrio transition-colors">A importância da comunicação não-violenta no casamento</h2>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-3">Muitos conflitos conjugais surgem não pelo problema em si, mas pela forma como ele é verbalizado. Entenda como pequenas mudanças na forma de falar melhoram a relação a dois.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=100&auto=format&fit=crop" alt="Foto Autor"></div>
+                            <span class="text-xs font-bold text-gray-700">Dra. Sofia Lima</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="bg-branco-puro rounded-3xl overflow-hidden shadow-soft hover-float group cursor-pointer border border-white">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-verde-equilibrio opacity-20 group-hover:opacity-10 transition-opacity z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Trabalho">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-damasco-acolhedor uppercase tracking-wider">Carreira</span>
+                            <span class="text-xs text-gray-400">05 Abr 2026</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-ceu-noturno mb-3 group-hover:text-damasco-acolhedor transition-colors">Sinais silenciosos do Burnout no home office</h2>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-3">Trabalhar de casa trouxe conforto, mas também borrou os limites entre descanso e produtividade. Descubra como identificar se você está passando dos seus limites corporais.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden"><img src="https://images.unsplash.com/photo-1601288496920-b6154fe3626a?q=80&w=100&auto=format&fit=crop" alt="Foto Autor"></div>
+                            <span class="text-xs font-bold text-gray-700">Dra. Beatriz Santos</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="bg-branco-puro border border-azul-serena text-azul-serena px-8 py-3 rounded-full font-bold hover:bg-azul-serena hover:text-branco-puro transition-slow shadow-soft">
+                    Carregar mais
+                </button>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Alerta CVV e Responsabilidade Técnica -->
+    <section class="bg-[#6B11CB] text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Coluna Responsável -->
+                <div class="md:col-span-1">
+                    <p class="text-sm opacity-80 font-light mb-1">Responsável técnico</p>
+                    <p class="text-xl font-bold font-heading">Oliviane Assis Ferrari Magro</p>
+                    <p class="text-sm font-medium">CRP: 08/34316</p>
+                </div>
+                <!-- Coluna Alerta -->
+                <div class="md:col-span-2">
+                    <p class="text-sm leading-relaxed text-balance">
+                        <strong>Atenção:</strong> Este site não oferece tratamento ou aconselhamento imediato para pessoas em crise suicida. Em caso de crise, ligue para <strong>188 (CVV)</strong> ou acesse o site <a href="https://www.cvv.org.br" target="_blank" class="underline hover:text-damasco-acolhedor transition-colors">www.cvv.org.br</a>. Em caso de emergência, procure atendimento em um hospital mais próximo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ceu-noturno text-branco-puro py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4 bg-white p-2 rounded-lg inline-block">
+                <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-8">
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2026 Liberté Psicologia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>

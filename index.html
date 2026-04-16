@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberté Psicologia - Sua Liberdade Mental</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Tailwind CSS (CDN para modo puramente estático/frontend) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-branco-puro shadow-soft sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-12 sm:h-14 pb-2">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center bg-transparent">
+                    <a href="busca.html"
+                        class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Psicólogos</a>
+                    <a href="como-funciona.html"
+                        class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Como Funciona</a>
+                    <a href="quem-somos.html"
+                        class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Quem Somos</a>
+                    <a href="sou-psicologo.html"
+                        class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Sou
+                        Profissional</a>
+                    <a href="admin/login.html"
+                        class="bg-azul-serena text-branco-puro px-5 py-2 rounded-full hover:bg-opacity-90 transition-slow font-medium shadow-soft hover-float">Entrar</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-ceu-noturno hover:text-azul-serena focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-branco-puro border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="busca.html" class="block px-3 py-2 rounded-md font-medium hover:bg-cinza-nevoa">Psicólogos</a>
+                <a href="como-funciona.html" class="block px-3 py-2 rounded-md font-medium hover:bg-cinza-nevoa">Como
+                    Funciona</a>
+                <a href="quem-somos.html" class="block px-3 py-2 rounded-md font-medium hover:bg-cinza-nevoa">Quem
+                    Somos</a>
+                <a href="sou-psicologo.html" class="block px-3 py-2 rounded-md font-medium hover:bg-cinza-nevoa">Sou
+                    Profissional</a>
+                <a href="admin/login.html"
+                    class="block px-3 py-2 text-azul-serena font-bold hover:bg-cinza-nevoa">Entrar / Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-branco-puro to-cinza-nevoa py-20 lg:py-32 relative overflow-hidden">
+            <!-- Decorative element -->
+            <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 opacity-20 hidden lg:block">
+                <i class="fa-solid fa-leaf text-[400px] text-damasco-acolhedor"></i>
+            </div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Sua <span class="text-azul-serena">liberdade mental</span> começa com um passo.
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl font-light">
+                        Encontre psicólogos qualificados com valores que cabem no seu bolso. Um espaço acolhedor e
+                        seguro para a sua jornada.
+                    </p>
+
+                    <!-- Busca Rápida -->
+                    <form action="busca.html" method="get"
+                        class="bg-branco-puro p-3 rounded-full shadow-float flex items-center max-w-2xl bg-opacity-90 backdrop-blur-sm border border-gray-100">
+                        <i class="fa-solid fa-magnifying-glass text-gray-400 pl-4"></i>
+                        <input type="text" name="q"
+                            placeholder="O que você está sentindo hoje ou qual especialidade procura?"
+                            class="flex-grow bg-transparent border-none focus:ring-0 px-4 py-3 outline-none text-ceu-noturno placeholder-gray-400 font-medium">
+                        <button type="submit"
+                            class="bg-verde-equilibrio text-branco-puro px-6 py-3 rounded-full hover:bg-opacity-90 font-medium transition-slow ml-2">
+                            Buscar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Como funciona -->
+        <section class="py-20 bg-branco-puro">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Como a Liberté Funciona</h2>
+                    <p class="text-gray-500 font-light">Um processo simples e transparente para o seu bem-estar.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="text-center group">
+                        <div
+                            class="w-24 h-24 mx-auto bg-cinza-nevoa rounded-full flex items-center justify-center mb-6 group-hover:bg-azul-serena transition-slow hover-float">
+                            <i
+                                class="fa-solid fa-user-doctor text-4xl text-ceu-noturno group-hover:text-branco-puro transition-colors line-art"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">1. Escolha o profissional</h3>
+                        <p class="text-gray-500">Navegue pelos perfis e encontre o psicólogo que mais se alinha com
+                            você.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="text-center group">
+                        <div
+                            class="w-24 h-24 mx-auto bg-cinza-nevoa rounded-full flex items-center justify-center mb-6 group-hover:bg-verde-equilibrio transition-slow hover-float">
+                            <i
+                                class="fa-brands fa-whatsapp text-4xl text-ceu-noturno group-hover:text-branco-puro transition-colors line-art"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">2. Agende via WhatsApp</h3>
+                        <p class="text-gray-500">Converse diretamente e agende o melhor horário na agenda.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="text-center group">
+                        <div
+                            class="w-24 h-24 mx-auto bg-cinza-nevoa rounded-full flex items-center justify-center mb-6 group-hover:bg-damasco-acolhedor transition-slow hover-float">
+                            <i
+                                class="fa-solid fa-laptop-medical text-4xl text-ceu-noturno group-hover:text-branco-puro transition-colors line-art"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">3. Faça sua sessão</h3>
+                        <p class="text-gray-500">Realize sua terapia online no conforto e segurança do seu ambiente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destaques -->
+        <section class="py-20 bg-cinza-nevoa">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-2">Profissionais em Destaque</h2>
+                        <p class="text-gray-500 font-light">Conheça alguns dos nossos especialistas mais bem avaliados.
+                        </p>
+                    </div>
+                    <a href="busca.html"
+                        class="hidden md:flex text-azul-serena font-semibold hover:underline items-center gap-2">
+                        Ver todos <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Carrossel de Cards -->
+                <div id="destaques-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Cards will be populated by JS -->
+                </div>
+
+                <div class="mt-10 text-center md:hidden">
+                    <a href="busca.html"
+                        class="inline-block border border-azul-serena text-azul-serena px-6 py-2 rounded-full font-medium">Ver
+                        todos os profissionais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prova Social -->
+        <section class="py-20 bg-branco-puro border-t border-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-16">Histórias de transformação</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-branco-puro p-8 rounded-2xl shadow-soft hover-float border border-gray-50">
+                        <div class="flex text-damasco-acolhedor mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Encontrei a psicóloga perfeita para o meu momento de luto.
+                            O ambiente de agendamento é tão humano e sem burocracia que me deu paz logo no primeiro
+                            passo."</p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="bg-cinza-nevoa w-10 h-10 rounded-full flex items-center justify-center text-ceu-noturno font-bold">
+                                M</div>
+                            <div>
+                                <h4 class="font-bold text-sm">Mariana</h4>
+                                <p class="text-xs text-gray-400">Paciente há 6 meses</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div
+                        class="bg-branco-puro p-8 rounded-2xl shadow-float relative -translate-y-4 border border-azul-serena border-opacity-20 z-10">
+                        <div class="flex text-damasco-acolhedor mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"A comunicação rápida pelo WhatsApp e saber que 100% do
+                            valor vai pro meu terapeuta me faz confiar muito mais na plataforma Liberté. Simples e
+                            ético."</p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="bg-cinza-nevoa w-10 h-10 rounded-full flex items-center justify-center text-ceu-noturno font-bold">
+                                L</div>
+                            <div>
+                                <h4 class="font-bold text-sm">Lucas</h4>
+                                <p class="text-xs text-gray-400">Paciente há 1 ano</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="bg-branco-puro p-8 rounded-2xl shadow-soft hover-float border border-gray-50">
+                        <div class="flex text-damasco-acolhedor mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Estava com medo de recomeçar a terapia online, mas
+                            encontrei opções muito em conta e profissionais incríveis de outras partes do Brasil."</p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="bg-cinza-nevoa w-10 h-10 rounded-full flex items-center justify-center text-ceu-noturno font-bold">
+                                C</div>
+                            <div>
+                                <h4 class="font-bold text-sm">Camila</h4>
+                                <p class="text-xs text-gray-400">Paciente recente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Alerta CVV e Responsabilidade Técnica -->
+    <section class="bg-[#76D7C4] text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Coluna Responsável -->
+                <div class="md:col-span-1">
+                    <p class="text-sm opacity-80 font-light mb-1">Responsável técnico</p>
+                    <p class="text-xl font-bold font-heading">Oliviane Assis Ferrari Magro</p>
+                    <p class="text-sm font-medium">CRP: 08/34316</p>
+                </div>
+                <!-- Coluna Alerta -->
+                <div class="md:col-span-2">
+                    <p class="text-sm leading-relaxed text-balance">
+                        <strong>Atenção:</strong> Este site não oferece tratamento ou aconselhamento imediato para
+                        pessoas em crise suicida. Em caso de crise, ligue para <strong>188 (CVV)</strong> ou acesse o
+                        site <a href="https://www.cvv.org.br" target="_blank"
+                            class="underline hover:text-damasco-acolhedor transition-colors">www.cvv.org.br</a>. Em caso
+                        de emergência, procure atendimento em um hospital mais próximo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ceu-noturno text-branco-puro pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-700 pb-12 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4 bg-white p-2 rounded-lg inline-block">
+                        <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-10">
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 max-w-xs">Democratizando o acesso à saúde mental de qualidade
+                        com tecnologia e humanidade.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-branco-puro hover:bg-azul-serena transition-colors"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-branco-puro hover:bg-azul-serena transition-colors"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 tet-lg">Institucional</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="quem-somos.html" class="hover:text-damasco-acolhedor transition-colors">Quem
+                                Somos</a></li>
+                        <li><a href="como-funciona.html" class="hover:text-damasco-acolhedor transition-colors">Como
+                                Funciona</a></li>
+                        <li><a href="blog.html" class="hover:text-damasco-acolhedor transition-colors">Blog</a></li>
+                        <li><a href="faq.html" class="hover:text-damasco-acolhedor transition-colors">Perguntas
+                                Frequentes</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 tet-lg">Profissionais</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="sou-psicologo.html" class="hover:text-damasco-acolhedor transition-colors">Seja um
+                                Psicólogo Liberté</a></li>
+                        <li><a href="admin/login.html" class="hover:text-damasco-acolhedor transition-colors">Acessar
+                                Painel</a></li>
+                        <li><a href="#" class="hover:text-damasco-acolhedor transition-colors">Termos de Uso do
+                                Profissional</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 tet-lg">Compliance & Ética</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-damasco-acolhedor transition-colors">Política de
+                                Privacidade</a></li>
+                        <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo-de-etica-psicologia.pdf"
+                                target="_blank"
+                                class="hover:text-damasco-acolhedor transition-colors flex items-center gap-1">Código de
+                                Ética <i class="fa-solid fa-external-link-alt text-[10px]"></i></a></li>
+                        <li><a href="https://e-psi.cfp.org.br/" target="_blank"
+                                class="hover:text-damasco-acolhedor transition-colors flex items-center gap-1">Cadastro
+                                e-Psi <i class="fa-solid fa-external-link-alt text-[10px]"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+            <div class="text-center text-sm text-gray-600">
+                &copy; 2026 Liberté Psicologia. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts da Página -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const psicologos = getPsicologos().filter(p => p.destaque).slice(0, 4);
+            const container = document.getElementById('destaques-container');
+
+            psicologos.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-branco-puro rounded-2xl overflow-hidden shadow-soft hover-float group";
+                card.innerHTML = `
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="${p.foto}" alt="${p.nome}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        ${p.disponivel ? '<div class="absolute top-4 right-4 bg-verde-equilibrio text-branco-puro text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-white opacity-90 animate-pulse"></span>Disponível hoje</div>' : ''}
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-1 text-ceu-noturno truncate" title="${p.nome}">${p.nome}</h3>
+                        <p class="text-sm text-gray-400 mb-4">${p.abordagem} • CRP ${p.crp}</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            ${p.especialidades.slice(0, 2).map(esp => `<span class="bg-cinza-nevoa text-gray-600 text-xs px-2 py-1 rounded-md">${esp}</span>`).join('')}
+                            ${p.especialidades.length > 2 ? `<span class="bg-cinza-nevoa text-gray-600 text-xs px-2 py-1 rounded-md">+${p.especialidades.length - 2}</span>` : ''}
+                        </div>
+                        
+                        <div class="flex justify-between items-center mt-auto border-t border-gray-100 pt-4">
+                            <span class="font-bold text-lg text-ceu-noturno">R$ 30</span>
+                            <a href="perfil.html?id=${p.id}" class="text-azul-serena hover:text-ceu-noturno transition-colors text-sm font-bold flex items-center gap-1">Ver perfil <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        });
+    </script>
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>

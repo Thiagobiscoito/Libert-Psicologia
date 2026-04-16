@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Psicólogos - Liberté Psicologia</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="bg-branco-puro shadow-soft sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-12 sm:h-14 pb-2">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="busca.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Psicólogos</a>
+                    <a href="como-funciona.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Como Funciona</a>
+                    <a href="sou-psicologo.html" class="text-azul-serena font-medium">Sou Profissional</a>
+                    <a href="admin/login.html" class="bg-azul-serena text-branco-puro px-5 py-2 rounded-full hover:bg-opacity-90 transition-slow font-medium shadow-soft hover-float">Acessar Painel</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-ceu-noturno hover:text-azul-serena focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section para Psicólogos -->
+        <section class="bg-ceu-noturno pt-20 pb-32 text-branco-puro relative overflow-hidden">
+            <div class="absolute inset-0 bg-blue-900 opacity-20 hidden md:block" style="background-image: radial-gradient(circle at right center, var(--tw-color-azul-serena), transparent 50%);"></div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <span class="bg-azul-serena bg-opacity-20 text-azul-serena px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-6 inline-block border border-azul-serena border-opacity-30">Para Profissionais</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl mx-auto">
+                    Sua agenda cheia, de forma ética e sem burocracia.
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-light">
+                    Receba 100% do valor da consulta diretamente do paciente. Sem taxas de agendamento, sem cortes, sem letras miúdas.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/5511999999999" class="bg-azul-serena text-branco-puro px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-slow hover-float shadow-float">Criar meu Perfil grátis</a>
+                    <a href="#planos" class="bg-transparent border border-gray-500 text-branco-puro px-8 py-4 rounded-full font-bold text-lg hover:border-branco-puro transition-slow">Ver planos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section class="py-20 bg-cinza-nevoa">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-ceu-noturno">Por que a Liberté?</h2>
+                    <p class="text-gray-500 mt-2 font-light">Anuncie seu perfil sem nenhum custo e receba o valor integral das suas consultas.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-branco-puro p-8 rounded-3xl shadow-soft hover-float border border-gray-100 flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-verde-equilibrio text-3xl mb-6">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ceu-noturno mb-3">Custo Zero</h3>
+                        <p class="text-gray-500">Diferente de outras plataformas, na Liberté você não paga nada para anunciar seu perfil e nem comissão por consulta. Nosso custo é zero.</p>
+                    </div>
+
+                    <div class="bg-branco-puro p-8 rounded-3xl shadow-soft hover-float border border-gray-100 flex flex-col items-center text-center relative -translate-y-4 shadow-float z-10 border border-azul-serena border-opacity-10">
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-azul-serena text-3xl mb-6">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ceu-noturno mb-3">Visibilidade Nacional</h3>
+                        <p class="text-gray-500">Seja encontrado por pacientes de todo o Brasil buscando terapia online. Aumente seu alcance exponencialmente.</p>
+                    </div>
+
+                    <div class="bg-branco-puro p-8 rounded-3xl shadow-soft border border-gray-100 flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-damasco-acolhedor text-3xl mb-6">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ceu-noturno mb-3">Contato Direto</h3>
+                        <p class="text-gray-500">O paciente clica no seu perfil e vai direto pro seu WhatsApp. Simples, rápido e no seu controle comercial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="bg-verde-equilibrio py-20 text-branco-puro text-center">
+            <div class="container mx-auto px-4">
+                <i class="fa-solid fa-seedling text-5xl mb-6 opacity-80"></i>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">Sua clínica online merece um lugar à altura e sem custos.</h2>
+                <p class="text-lg opacity-90 mb-10 max-w-2xl mx-auto">Cadastre-se hoje mesmo. O processo leva menos de 5 minutos e requer apenas seu CRP ativo para verificação.</p>
+                <a href="https://wa.me/5511999999999" class="inline-block bg-branco-puro text-verde-equilibrio px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-slow shadow-float hover-float">Cadastrar meu Perfil Grátis</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Alerta CVV e Responsabilidade Técnica -->
+    <section class="bg-[#6B11CB] text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Coluna Responsável -->
+                <div class="md:col-span-1">
+                    <p class="text-sm opacity-80 font-light mb-1">Responsável técnico</p>
+                    <p class="text-xl font-bold font-heading">Oliviane Assis Ferrari Magro</p>
+                    <p class="text-sm font-medium">CRP: 08/34316</p>
+                </div>
+                <!-- Coluna Alerta -->
+                <div class="md:col-span-2">
+                    <p class="text-sm leading-relaxed text-balance">
+                        <strong>Atenção:</strong> Este site não oferece tratamento ou aconselhamento imediato para pessoas em crise suicida. Em caso de crise, ligue para <strong>188 (CVV)</strong> ou acesse o site <a href="https://www.cvv.org.br" target="_blank" class="underline hover:text-damasco-acolhedor transition-colors">www.cvv.org.br</a>. Em caso de emergência, procure atendimento em um hospital mais próximo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ceu-noturno text-branco-puro py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4 bg-white p-2 rounded-lg inline-block">
+                <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-8">
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2026 Liberté Psicologia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

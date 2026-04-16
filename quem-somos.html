@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Liberté Psicologia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-branco-puro">
+
+    <header class="bg-branco-puro shadow-soft sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-12 sm:h-14 pb-2">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="busca.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Psicólogos</a>
+                    <a href="como-funciona.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Como Funciona</a>
+                    <a href="quem-somos.html" class="text-azul-serena font-medium">Quem Somos</a>
+                    <a href="sou-psicologo.html" class="text-ceu-noturno hover:text-azul-serena transition-colors font-medium">Sou Profissional</a>
+                    <a href="admin/login.html" class="bg-azul-serena text-branco-puro px-5 py-2 rounded-full hover:bg-opacity-90 transition-slow font-medium shadow-soft">Entrar</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-ceu-noturno hover:text-azul-serena focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Quem Somos -->
+        <section class="bg-ceu-noturno text-branco-puro py-24 relative overflow-hidden">
+            <!-- Padrão abstrato sutil -->
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 100% 100%, var(--tw-color-damasco-acolhedor), transparent 50%);"></div>
+            
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 font-heading text-damasco-acolhedor">A história da Liberté</h1>
+                <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto opacity-90 text-branco-puro leading-relaxed">
+                    Nascemos com um único propósito: <br class="hidden md:block">devolver o poder de escolha para pacientes e profissionais.
+                </p>
+            </div>
+        </section>
+
+        <!-- A História -->
+        <section class="py-20">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="bg-cinza-nevoa p-10 md:p-16 rounded-[3rem] shadow-soft text-ceu-noturno">
+                    <div class="flex items-center gap-4 mb-8">
+                        <i class="fa-solid fa-feather-pointed text-4xl text-damasco-acolhedor"></i>
+                        <h2 class="text-3xl font-bold">Por que "Liberté"?</h2>
+                    </div>
+                    <div class="space-y-6 text-lg text-gray-600 leading-relaxed font-light">
+                        <p>
+                            Liberté significa <strong>Liberdade</strong> em francês. E foi a falta de liberdade que nos motivou a criar a plataforma.
+                        </p>
+                        <p>
+                            Muitos aplicativos de terapia funcionam como "intermediários de aluguel", cobrando taxas abusivas dos psicólogos por sessão e limitando a escolha do paciente ao esconder informações vitais sobre as qualificações do profissional.
+                        </p>
+                        <p>
+                            <strong>Acreditamos na autonomia.</strong> O paciente deve ser livre para escolher o psicólogo com quem mais se identifica. E o psicólogo deve ser livre para trabalhar e receber 100% dos honorários do seu serviço e manter seu próprio fluxo de atendimento terapêutico com independência.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missão e Visão -->
+        <section class="py-20 bg-branco-puro">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <!-- Missão -->
+                    <div class="bg-gray-50 border border-gray-100 p-10 rounded-3xl hover-float transition-slow relative overflow-hidden group">
+                        <div class="absolute -right-6 -top-6 w-32 h-32 bg-azul-serena rounded-full mix-blend-multiply opacity-5 group-hover:scale-150 transition-all duration-700"></div>
+                        <i class="fa-solid fa-bullseye text-4xl text-azul-serena mb-6"></i>
+                        <h3 class="text-2xl font-bold text-ceu-noturno mb-4 font-heading">Nossa Missão</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Democratizar o acesso à saúde mental de qualidade no Brasil, oferecendo uma ponte simples, ética e sem taxas entre pacientes que precisam de escuta e profissionais devidamente qualificados.
+                        </p>
+                    </div>
+
+                    <!-- Visão -->
+                    <div class="bg-gray-50 border border-gray-100 p-10 rounded-3xl hover-float transition-slow relative overflow-hidden group">
+                        <div class="absolute -right-6 -top-6 w-32 h-32 bg-damasco-acolhedor rounded-full mix-blend-multiply opacity-10 group-hover:scale-150 transition-all duration-700"></div>
+                        <i class="fa-solid fa-eye text-4xl text-damasco-acolhedor mb-6"></i>
+                        <h3 class="text-2xl font-bold text-ceu-noturno mb-4 font-heading">Nossa Visão</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Ser reconhecida como a plataforma mais humana e transparente do Brasil, mudando a forma como psicólogos constroem suas clínicas e como pacientes encontram conforto.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA -->
+        <section class="py-16 bg-cinza-nevoa text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold text-ceu-noturno mb-6">Faça parte da nossa história</h2>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="busca.html" class="bg-azul-serena text-branco-puro px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-slow">Sou Paciente</a>
+                    <a href="sou-psicologo.html" class="bg-transparent border-2 border-verde-equilibrio text-verde-equilibrio px-8 py-3 rounded-full font-bold hover:bg-verde-equilibrio hover:text-branco-puro transition-slow">Sou Profissional</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Alerta CVV e Responsabilidade Técnica -->
+    <section class="bg-[#6B11CB] text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Coluna Responsável -->
+                <div class="md:col-span-1">
+                    <p class="text-sm opacity-80 font-light mb-1">Responsável técnico</p>
+                    <p class="text-xl font-bold font-heading">Oliviane Assis Ferrari Magro</p>
+                    <p class="text-sm font-medium">CRP: 08/34316</p>
+                </div>
+                <!-- Coluna Alerta -->
+                <div class="md:col-span-2">
+                    <p class="text-sm leading-relaxed text-balance">
+                        <strong>Atenção:</strong> Este site não oferece tratamento ou aconselhamento imediato para pessoas em crise suicida. Em caso de crise, ligue para <strong>188 (CVV)</strong> ou acesse o site <a href="https://www.cvv.org.br" target="_blank" class="underline hover:text-damasco-acolhedor transition-colors">www.cvv.org.br</a>. Em caso de emergência, procure atendimento em um hospital mais próximo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ceu-noturno text-branco-puro py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4 bg-white p-2 rounded-lg inline-block">
+                <img src="img/Logo.png" alt="Liberté Psicologia Logo" class="h-8">
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2026 Liberté Psicologia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>
