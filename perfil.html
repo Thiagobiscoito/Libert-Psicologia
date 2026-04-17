@@ -200,18 +200,17 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             const urlParams = new URLSearchParams(window.location.search);
             const id = parseInt(urlParams.get('id'));
-            
-            const psicologos = getPsicologos();
-            const p = psicologos.find(x => x.id === id);
 
             const container = document.getElementById('perfil-container');
             const loading = document.getElementById('loading');
             const notFound = document.getElementById('not-found');
 
-            setTimeout(() => { // Simular um pequeno delay para a UI ficar mais suave
+            try {
+                const p = await fetchPsicologoById(id);
+
                 loading.classList.add('hidden');
                 
                 if (p) {
@@ -225,7 +224,6 @@
                     document.getElementById('p-estrelas').textContent = p.estrelas;
                     document.getElementById('p-avaliacoes').textContent = `(baseado em ${p.avaliacoes} opiniões)`;
 
-                    
                     if(p.disponivel) {
                         document.getElementById('p-badge').classList.remove('hidden');
                     }
@@ -249,7 +247,11 @@
                 } else {
                     notFound.classList.remove('hidden');
                 }
-            }, 300);
+            } catch (err) {
+                loading.classList.add('hidden');
+                notFound.classList.remove('hidden');
+                console.error('Erro ao carregar perfil:', err);
+            }
         });
     </script>
     <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">

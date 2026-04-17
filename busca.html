@@ -165,11 +165,17 @@
     <!-- Scripts da Página -->
     <script src="js/main.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const psicologos = getPsicologos();
+        document.addEventListener('DOMContentLoaded', async () => {
+            let psicologos = [];
             const container = document.getElementById('results-container');
             const noResults = document.getElementById('no-results');
             const resultsCount = document.getElementById('results-count');
+
+            try {
+                psicologos = await fetchPsicologos();
+            } catch (err) {
+                console.error('Erro ao buscar psicólogos:', err);
+            }
             
             // Extract unique specialties for the filter
             let allSpecialties = new Set();
@@ -199,7 +205,6 @@
             // Filters logic
             document.getElementById('search-input').addEventListener('input', renderResults);
             document.querySelectorAll('input[name="genero"]').forEach(el => el.addEventListener('change', renderResults));
-            document.querySelectorAll('input[name="genero"]').forEach(el => el.addEventListener('change', renderResults));
             document.querySelectorAll('.esp-checkbox').forEach(el => el.addEventListener('change', renderResults));
             document.getElementById('clear-filters').addEventListener('click', clearFilters);
             document.getElementById('reset-search-btn').addEventListener('click', clearFilters);
@@ -218,18 +223,12 @@
                 const checkedEsps = Array.from(document.querySelectorAll('.esp-checkbox:checked')).map(cb => cb.value);
 
                 const filtered = psicologos.filter(p => {
-                    // Search Match
                     const matchText = searchQ === '' || 
                                       p.nome.toLowerCase().includes(searchQ) || 
                                       p.especialidades.some(e => e.toLowerCase().includes(searchQ)) ||
                                       p.abordagem.toLowerCase().includes(searchQ);
-
-                    // Gender Match
                     const matchGenero = selGenero === 'all' || p.genero === selGenero;
-
-                    // Specialty Match
                     const matchEsp = checkedEsps.length === 0 || checkedEsps.some(e => p.especialidades.includes(e));
-
                     return matchText && matchGenero && matchEsp;
                 });
 
